@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0eb198b9-2c65-4a4b-b3a6-c64446354741" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/post.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170419165400_create_posts.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170419174546_create_comments.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/post_spec.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/.keep" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.bundle/" />
+    <ignored path="$PROJECT_DIR$/components/" />
+    <ignored path="$PROJECT_DIR$/public/system/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/vendor/bundle/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Rails bloccit: test" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Rails bloccit: development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Rails bloccit: development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="main" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="33" />
+    <option name="y" value="50" />
+    <option name="width" value="1248" />
+    <option name="height" value="867" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bloccit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bloccit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Rails.Development: bloccit">
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <filePath value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoRunFileConfiguration" factoryName="Go Single File">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Rake.test: bloccit" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec: bloccit" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: bloccit" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: bloccit" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0eb198b9-2c65-4a4b-b3a6-c64446354741" name="Default" comment="" />
+      <created>1492627573308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1492627573308</updated>
+      <workItem from="1492627574417" duration="460000" />
+      <workItem from="1492628101006" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="465000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="33" y="50" width="1248" height="867" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19391026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803398" sideWeight="0.5032051" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25641027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803398" sideWeight="0.49679488" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="uml://GemDependency/#bloccit">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>GemDependency</ID>
+          <OriginalElement>#bloccit</OriginalElement>
+          <nodes>
+            <node x="4209.0" y="0.0">turbolinks-source</node>
+            <node x="394.0" y="0.0">rspec-expectations</node>
+            <node x="901.0" y="0.0">rspec-support</node>
+            <node x="1432.9999999999998" y="0.0">i18n</node>
+            <node x="3677.0" y="0.0">globalid</node>
+            <node x="4371.0" y="0.0">rspec-rails</node>
+            <node x="3443.0" y="0.0">erubis</node>
+            <node x="4929.0" y="0.0">coffee-script-source</node>
+            <node x="1799.9999999999998" y="0.0">concurrent-ruby</node>
+            <node x="1719.9999999999998" y="0.0">sass</node>
+            <node x="4488.0" y="0.0">jquery-rails</node>
+            <node x="4835.0" y="0.0">builder</node>
+            <node x="5874.0" y="0.0">actionmailer</node>
+            <node x="2625.0" y="0.0">diff-lcs</node>
+            <node x="639.0" y="0.0">mini_portile2</node>
+            <node x="6215.0" y="0.0">activemodel</node>
+            <node x="2511.0" y="0.0">turbolinks</node>
+            <node x="3533.0" y="0.0">sprockets-rails</node>
+            <node x="2858.0" y="0.0">bundler</node>
+            <node x="0.0" y="0.0">rails-html-sanitizer</node>
+            <node x="2143.0" y="0.0">rack-test</node>
+            <node x="6000.0" y="0.0">sqlite3</node>
+            <node x="769.0" y="0.0">rspec-mocks</node>
+            <node x="5377.0" y="0.0">activerecord</node>
+            <node x="2055.0" y="0.0">tzinfo</node>
+            <node x="3035.0" y="0.0">mail</node>
+            <node x="565.0" y="0.0">arel</node>
+            <node x="5266.0" y="0.0">sass-rails</node>
+            <node x="1143.9999999999998" y="0.0">railties</node>
+            <node x="5109.0" y="0.0">mime-types-data</node>
+            <node x="4609.0" y="0.0">rspec-core</node>
+            <node x="4038.0" y="0.0">nyan-cat-formatter</node>
+            <node x="3235.0" y="0.0">actionview</node>
+            <node x="168.0" y="0.0">autoprefixer-rails</node>
+            <node x="1235.9999999999998" y="0.0">rack</node>
+            <node x="4728.0" y="0.0">activejob</node>
+            <node x="3352.0" y="0.0">loofah</node>
+            <node x="1587.9999999999998" y="0.0">coffee-script</node>
+            <node x="1509.9999999999998" y="0.0">rake</node>
+            <node x="1042.0" y="0.0">nokogiri</node>
+            <node x="3961.0" y="0.0">rails</node>
+            <node x="2251.0" y="0.0">sprockets</node>
+            <node x="1313.9999999999998" y="0.0">actionpack</node>
+            <node x="3111.0" y="0.0">thread_safe</node>
+            <node x="5664.0" y="0.0">rspec</node>
+            <node x="5750.0" y="0.0">mime-types</node>
+            <node x="2364.0" y="0.0">bootstrap-sass</node>
+            <node x="6093.0" y="0.0">coffee-rails</node>
+            <node x="6340.0" y="0.0">rails-deprecated_sanitizer</node>
+            <node x="1953.9999999999998" y="0.0">minitest</node>
+            <node x="2957.0" y="0.0">thor</node>
+            <node x="326.0" y="0.0">tilt</node>
+            <node x="2721.0" y="0.0">activesupport</node>
+            <node x="3777.0" y="0.0">execjs</node>
+            <node x="3075.0" y="339.0">#bloccit</node>
+            <node x="3867.0" y="0.0">uglifier</node>
+            <node x="5505.0" y="0.0">rails-dom-testing</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="#bloccit" target="tilt">
+              <point x="-34.60714285714312" y="-14.5" />
+              <point x="3078.392857142857" y="299.0" />
+              <point x="350.0" y="299.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="nokogiri">
+              <point x="-26.46428571428578" y="-14.5" />
+              <point x="3086.5357142857138" y="239.0" />
+              <point x="1083.0" y="239.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rspec-support">
+              <point x="-27.82142857142844" y="-14.5" />
+              <point x="3085.1785714285716" y="249.0" />
+              <point x="961.5" y="249.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="thread_safe">
+              <point x="0.6785714285715585" y="-14.5" />
+              <point x="3113.6785714285716" y="49.0" />
+              <point x="3163.0" y="49.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="mail">
+              <point x="-0.6785714285715585" y="-14.5" />
+              <point x="3112.3214285714284" y="49.0" />
+              <point x="3063.0" y="49.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="bootstrap-sass">
+              <point x="-8.821428571428442" y="-14.5" />
+              <point x="3104.1785714285716" y="109.0" />
+              <point x="2427.5" y="109.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rails-deprecated_sanitizer">
+              <point x="37.32142857142844" y="-14.5" />
+              <point x="3150.3214285714284" y="319.0" />
+              <point x="6435.0" y="319.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rake">
+              <point x="-19.67857142857156" y="-14.5" />
+              <point x="3093.3214285714284" y="189.0" />
+              <point x="1538.9999999999998" y="189.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="sass-rails">
+              <point x="25.107142857142662" y="-14.5" />
+              <point x="3138.107142857142" y="229.0" />
+              <point x="5311.5" y="229.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="sass">
+              <point x="-16.96428571428578" y="-14.5" />
+              <point x="3096.0357142857138" y="169.0" />
+              <point x="1749.9999999999998" y="169.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="execjs">
+              <point x="8.821428571428442" y="-14.5" />
+              <point x="3121.8214285714284" y="109.0" />
+              <point x="3812.0" y="109.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="activesupport">
+              <point x="-4.75" y="-14.5" />
+              <point x="3108.25" y="79.0" />
+              <point x="2779.5" y="79.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rspec-expectations">
+              <point x="-33.25" y="-14.5" />
+              <point x="3079.75" y="289.0" />
+              <point x="469.5" y="289.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="coffee-rails">
+              <point x="34.60714285714266" y="-14.5" />
+              <point x="3147.607142857142" y="299.0" />
+              <point x="6144.0" y="299.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="coffee-script">
+              <point x="-18.32142857142844" y="-14.5" />
+              <point x="3094.6785714285716" y="179.0" />
+              <point x="1643.9999999999998" y="179.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="minitest">
+              <point x="-14.25" y="-14.5" />
+              <point x="3098.75" y="149.0" />
+              <point x="1994.4999999999998" y="149.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="loofah">
+              <point x="3.3928571428573377" y="-14.5" />
+              <point x="3116.392857142857" y="69.0" />
+              <point x="3387.5" y="69.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="bundler">
+              <point x="-3.3928571428573377" y="-14.5" />
+              <point x="3109.607142857142" y="69.0" />
+              <point x="2897.5" y="69.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="arel">
+              <point x="-31.892857142857338" y="-14.5" />
+              <point x="3081.107142857142" y="279.0" />
+              <point x="592.0" y="279.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="actionview">
+              <point x="2.0357142857142208" y="-14.5" />
+              <point x="3115.0357142857138" y="59.0" />
+              <point x="3283.5" y="59.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="diff-lcs">
+              <point x="-6.107142857143117" y="-14.5" />
+              <point x="3106.892857142857" y="89.0" />
+              <point x="2663.0" y="89.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rspec-rails">
+              <point x="15.607142857142662" y="-14.5" />
+              <point x="3128.607142857142" y="159.0" />
+              <point x="4419.5" y="159.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="actionpack">
+              <point x="-22.392857142857338" y="-14.5" />
+              <point x="3090.607142857142" y="209.0" />
+              <point x="1363.4999999999998" y="209.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rack-test">
+              <point x="-11.53571428571422" y="-14.5" />
+              <point x="3101.4642857142853" y="129.0" />
+              <point x="2187.0" y="129.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="turbolinks">
+              <point x="-7.464285714285779" y="-14.5" />
+              <point x="3105.5357142857138" y="99.0" />
+              <point x="2558.0" y="99.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="builder">
+              <point x="21.03571428571422" y="-14.5" />
+              <point x="3134.0357142857138" y="199.0" />
+              <point x="4872.0" y="199.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="activerecord">
+              <point x="26.46428571428578" y="-14.5" />
+              <point x="3139.4642857142853" y="239.0" />
+              <point x="5431.0" y="239.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="railties">
+              <point x="-25.107142857143117" y="-14.5" />
+              <point x="3087.892857142857" y="229.0" />
+              <point x="1179.9999999999998" y="229.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="i18n">
+              <point x="-21.03571428571422" y="-14.5" />
+              <point x="3091.9642857142853" y="199.0" />
+              <point x="1461.4999999999998" y="199.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="concurrent-ruby">
+              <point x="-15.607142857143117" y="-14.5" />
+              <point x="3097.392857142857" y="159.0" />
+              <point x="1866.9999999999998" y="159.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="globalid">
+              <point x="7.464285714285779" y="-14.5" />
+              <point x="3120.4642857142853" y="99.0" />
+              <point x="3717.0" y="99.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="activejob">
+              <point x="19.67857142857156" y="-14.5" />
+              <point x="3132.6785714285716" y="189.0" />
+              <point x="4771.5" y="189.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="sqlite3">
+              <point x="33.25" y="-14.5" />
+              <point x="3146.25" y="289.0" />
+              <point x="6036.5" y="289.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="activemodel">
+              <point x="35.96428571428578" y="-14.5" />
+              <point x="3148.9642857142853" y="309.0" />
+              <point x="6267.5" y="309.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="erubis">
+              <point x="4.75" y="-14.5" />
+              <point x="3117.75" y="79.0" />
+              <point x="3478.0" y="79.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="jquery-rails">
+              <point x="16.96428571428578" y="-14.5" />
+              <point x="3129.9642857142853" y="169.0" />
+              <point x="4538.5" y="169.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="sprockets">
+              <point x="-10.178571428571558" y="-14.5" />
+              <point x="3102.8214285714284" y="119.0" />
+              <point x="2297.5" y="119.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="nyan-cat-formatter">
+              <point x="12.892857142857338" y="-14.5" />
+              <point x="3125.892857142857" y="139.0" />
+              <point x="4113.5" y="139.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rails-html-sanitizer">
+              <point x="-37.321428571428896" y="-14.5" />
+              <point x="3075.6785714285706" y="319.0" />
+              <point x="74.0" y="319.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rspec">
+              <point x="29.17857142857156" y="-14.5" />
+              <point x="3142.1785714285716" y="259.0" />
+              <point x="5697.0" y="259.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="sprockets-rails">
+              <point x="6.107142857142662" y="-14.5" />
+              <point x="3119.107142857142" y="89.0" />
+              <point x="3595.0" y="89.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="actionmailer">
+              <point x="31.892857142857338" y="-14.5" />
+              <point x="3144.892857142857" y="279.0" />
+              <point x="5927.0" y="279.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rspec-mocks">
+              <point x="-29.17857142857156" y="-14.5" />
+              <point x="3083.8214285714284" y="259.0" />
+              <point x="825.0" y="259.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="turbolinks-source">
+              <point x="14.25" y="-14.5" />
+              <point x="3127.25" y="149.0" />
+              <point x="4280.0" y="149.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rails-dom-testing">
+              <point x="27.82142857142844" y="-14.5" />
+              <point x="3140.8214285714284" y="249.0" />
+              <point x="5574.5" y="249.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rspec-core">
+              <point x="18.32142857142844" y="-14.5" />
+              <point x="3131.3214285714284" y="179.0" />
+              <point x="4658.5" y="179.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="coffee-script-source">
+              <point x="22.392857142857338" y="-14.5" />
+              <point x="3135.392857142857" y="209.0" />
+              <point x="5009.0" y="209.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="autoprefixer-rails">
+              <point x="-35.96428571428578" y="-14.5" />
+              <point x="3077.0357142857138" y="309.0" />
+              <point x="237.0" y="309.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="mini_portile2">
+              <point x="-30.53571428571422" y="-14.5" />
+              <point x="3082.4642857142853" y="269.0" />
+              <point x="694.0" y="269.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="tzinfo">
+              <point x="-12.892857142857338" y="-14.5" />
+              <point x="3100.107142857142" y="139.0" />
+              <point x="2089.0" y="139.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rack">
+              <point x="-23.75" y="-14.5" />
+              <point x="3089.25" y="219.0" />
+              <point x="1264.9999999999998" y="219.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="thor">
+              <point x="-2.0357142857142208" y="-14.5" />
+              <point x="3110.9642857142853" y="59.0" />
+              <point x="2986.0" y="59.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="uglifier">
+              <point x="10.178571428571558" y="-14.5" />
+              <point x="3123.1785714285716" y="119.0" />
+              <point x="3904.0" y="119.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="rails">
+              <point x="11.53571428571422" y="-14.5" />
+              <point x="3124.5357142857138" y="129.0" />
+              <point x="3989.5" y="129.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="mime-types-data">
+              <point x="23.75" y="-14.5" />
+              <point x="3136.75" y="219.0" />
+              <point x="5177.5" y="219.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="#bloccit" target="mime-types">
+              <point x="30.53571428571422" y="-14.5" />
+              <point x="3143.5357142857138" y="269.0" />
+              <point x="5802.0" y="269.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.10473282442748091" x="2282.0" y="-107.0" />
+          <SelectedNodes>
+            <node>rails-dom-testing</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://RailsDependency/Post">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>Post</OriginalElement>
+          <nodes>
+            <node x="" y="">Comment</node>
+            <node x="" y="">Post</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="249.0" y="48.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Migration fields</Category>
+            <Category>Association fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/fcafde95/6987d6aa-791a-4942-a3fb-c2a400c542bd/main.sqlite_sequence">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/6987d6aa-791a-4942-a3fb-c2a400c542bd">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>6987d6aa-791a-4942-a3fb-c2a400c542bd</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">6987d6aa-791a-4942-a3fb-c2a400c542bd.TABLE:main.comments</node>
+            <node x="0.0" y="369.0">6987d6aa-791a-4942-a3fb-c2a400c542bd.TABLE:main.schema_migrations</node>
+            <node x="234.0" y="185.0">6987d6aa-791a-4942-a3fb-c2a400c542bd.TABLE:main.sqlite_sequence</node>
+            <node x="236.0" y="0.0">6987d6aa-791a-4942-a3fb-c2a400c542bd.TABLE:main.posts</node>
+            <node x="0.0" y="185.0">6987d6aa-791a-4942-a3fb-c2a400c542bd.TABLE:main.sqlite_master</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="214.0" y="271.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
