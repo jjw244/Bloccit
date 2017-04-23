@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+# #1 call the resource method and pass it a Symbol.
+ #This instructs Rails to create post routes for creating, updating, viewing, and deleting instances of Post.
+  resources :posts
 
-  get 'welcome/about'
+# #2  modify about route to allow users to visit /about directly
+  get 'about' => 'welcom#about'
 
   root 'welcome#index'
 
