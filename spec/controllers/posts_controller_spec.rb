@@ -11,7 +11,7 @@ RSpec.describe PostsController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
-  # #7 the test performs a GET on the index view and expects the ersponse to be successful
+  # #7 the test performs a GET on the index view and expects the response to be successful
       get :index
       expect(response).to have_http_status(:success)
     end

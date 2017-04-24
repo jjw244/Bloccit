@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :posts
 
 # #2  modify about route to allow users to visit /about directly
-  get 'about' => 'welcom#about'
+  get 'about' => 'welcome#about'
 
   root 'welcome#index'
 
