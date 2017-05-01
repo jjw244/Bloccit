@@ -27,7 +27,7 @@ RSpec.describe AdvertisementController, type: :controller do
       expect(response).to render_template :show
     end
 
-    it "assigns my_advertisement to @post" do
+    it "assigns my_advertisement to @advertisment" do
       get :show, {id: my_advertisement.id}
       expect(assigns(:advertisement)).to eq(my_advertisement)
     end
@@ -40,8 +40,8 @@ RSpec.describe AdvertisementController, type: :controller do
     end
   end
 
-  describe "ADVERTISEMENT create" do
-    it "increases the number of Advertisement by 1" do
+  describe "POST create" do
+    it "increases the number of advertisement by 1" do
       expect{post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Advertisement,:count).by(1)
     end
 
@@ -49,7 +49,7 @@ RSpec.describe AdvertisementController, type: :controller do
       post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
     end
 
-    it "redirects to the new post" do
+    it "redirects to the new advertisement" do
       post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
     end
   end
