@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe QuestionController, type: :controller do
+RSpec.describe QuestionsController, type: :controller do
 
   let(:my_question) { Question.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: false)}
 
@@ -27,9 +27,9 @@ RSpec.describe QuestionController, type: :controller do
       expect(response).to render_template :new
     end
 
-    it "instantiates @questions" do
+    it "instantiates @question" do
       get :new
-      expect(assigns(:questions)).not_to be_nil
+      expect(assigns(:question)).not_to be_nil
     end
   end
 
@@ -38,7 +38,7 @@ RSpec.describe QuestionController, type: :controller do
       expect{post :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Question,:count).by(1)
     end
 
-    it "assigns the new question to @questions" do
+    it "assigns the new question to @question" do
       post :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
     end
 
@@ -58,9 +58,9 @@ RSpec.describe QuestionController, type: :controller do
       expect(response).to render_template :show
     end
 
-    it "assigns my_question to @questions" do
+    it "assigns my_question to @question" do
       get :show, {id: my_question.id}
-      expect(assigns(:questions)).to eq(my_question)
+      expect(assigns(:question)).to eq(my_question)
     end
   end
 
