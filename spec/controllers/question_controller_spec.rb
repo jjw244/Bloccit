@@ -84,9 +84,6 @@ RSpec.describe QuestionController, type: :controller do
       put :update, id: my_question.id, question: {title: new_title, body: new_body, resolved: false}
 
       updated_question = assigns(:question)
-      expect(updated_question.id).to eq my_question.id
-      expect(updated_question.title).to eq new_title
-      expect(updated_question.body).to eq new_body
     end
 
     it "redirects to the updated question" do
