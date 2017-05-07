@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-# #1 call the resource method and pass it a Symbol.
- #This instructs Rails to create post routes for creating, updating, viewing, and deleting instances of Post.
-  resources :posts
+  resources :topics do
+# #34  pass resources :posts to the resources :topics block. This nests the post routes under the topic routes
+    resources :posts, except: [:index]
+  end
 
 # #2  modify about route to allow users to visit /about directly
   get 'about' => 'welcome#about'
