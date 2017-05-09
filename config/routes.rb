@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     resources :posts, except: [:index]
   end
 
+# #7  create routes for new and create actions.
+ #The only hash key will prevent Rails from creating unnecessary routes.
+    resources :users, only: [:new, :create]
+
+
 # #2  modify about route to allow users to visit /about directly
   get 'about' => 'welcome#about'
 
