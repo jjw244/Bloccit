@@ -9,6 +9,17 @@ require 'random_data'
 end
 topics = Topic.all
 
+# Create Sponsored Posts
+25.times do
+  SponsoredPost.create!(
+    topic:  topics.sample,
+    title: RandomData.random_sentence,
+    body:  RandomData.random_paragraph,
+    price: RandomData.random_number
+  )
+end
+sponsored_posts = SponsoredPost.all
+
 # Create Posts
 50.times do
  # #1  Adding a ! instructs the method to raise an error if there's a problem with the data we're seeding
@@ -22,7 +33,6 @@ end
 posts = Post.all
 
 # Create Comments
-# #3  x.times runs a block x times
 100.times do
   Comment.create!(
 # #4  call sample on Post.all array inorder to pick a random post to associate each comment with; returns a random element from the array every time it's called
@@ -32,6 +42,7 @@ posts = Post.all
 end
 
 puts "Seed finished"
+puts "#{SponsoredPost.count} sponsored posts created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"

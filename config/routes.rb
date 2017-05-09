@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :topics do
 # #34  pass resources :posts to the resources :topics block. This nests the post routes under the topic routes
-    resources :posts, except: [:index]
+    resources :posts, :sponsored_posts, except: [:index]
+    # resources :sponsored_posts, except: [:index]
   end
 
 # #2  modify about route to allow users to visit /about directly

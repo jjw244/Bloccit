@@ -67,8 +67,8 @@ RSpec.describe PostsController, type: :controller do
     end
 
     it "assigns my_post to @post" do
-  # #17  update our get :show request to include the id of the parent topic
-         get :show, topic_id: my_topic.id, id: my_post.id
+# #17  update our get :show request to include the id of the parent topic
+       get :show, topic_id: my_topic.id, id: my_post.id
 # #18  expect the post to equal my_post because we call show with the id of  my_post
       expect(assigns(:post)).to eq(my_post)
     end
