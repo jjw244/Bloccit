@@ -8,6 +8,7 @@ Rails.application.routes.draw do
  #The only hash key will prevent Rails from creating unnecessary routes.
     resources :users, only: [:new, :create]
 
+    resources :sessions, only: [:new, :create, :destroy]
 
 # #2  modify about route to allow users to visit /about directly
   get 'about' => 'welcome#about'
