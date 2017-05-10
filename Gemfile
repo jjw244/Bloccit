@@ -32,6 +32,5 @@ source 'https://rubygems.org'
  gem 'turbolinks'
  # Use bootstrap-sass for CSS frameworks
  gem 'bootstrap-sass'
-
  # Used for encrypting User passwords
  gem 'bcrypt'
