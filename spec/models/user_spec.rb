@@ -23,8 +23,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-# #1  wrote a test that does not follow the same conventions as our previous tests.
- #We are testing for a value that we know should be invalid (true negative).
+# #1  testing for a value that we know should be invalid (true negative)
    describe "invalid user" do
     let(:user_with_invalid_name) { User.new(name: "", email: "user@bloccit.com") }
     let(:user_with_invalid_email) { User.new(name: "Bloccit User", email: "") }
@@ -36,6 +35,13 @@ RSpec.describe User, type: :model do
     it "should be an invalid user due to blank email" do
       expect(user_with_invalid_email).to_not be_valid
     end
+  end
 
+  describe "formatted name" do
+    it "should format all user names" do
+      user.name = "jennifer washburn"
+      user.save
+      expect(user.name).to eq "Jennifer Washburn"
+    end
   end
 end

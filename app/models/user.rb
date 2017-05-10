@@ -1,4 +1,18 @@
 class User < ActiveRecord::Base
+
+  before_save :format_name
+
+    def format_name
+      if name
+        name_arr = []
+        self.name.split.each do |flname|
+          name_arr << flname.capitalize
+        end
+
+        self.name = name_arr.join(" ")
+      end
+    end
+
 # #2  register an inline callback directly after the before_save callback.
  #{ self.email = email.downcase } is the code that will run when the callback executes.
   before_save { self.email = email.downcase if email.present? }
