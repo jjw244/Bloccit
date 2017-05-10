@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
 # #7  create routes for new and create actions.
  #The only hash key will prevent Rails from creating unnecessary routes.
-    resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create]
 
+  post 'users/confirm' => 'users#confirm'
 
 # #2  modify about route to allow users to visit /about directly
   get 'about' => 'welcome#about'
