@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+# #12
+  before_action :require_sign_in, except: :show
+
   def show
 # #19  find the post that corresponds to the id in the params that was passed to  show and assign it to @post
   # Unlike in the index method, in the show method, we populate an instance variable with a single post, rather than a collection of posts
@@ -13,12 +16,10 @@ class PostsController < ApplicationController
 
   def create
 # #9  call Post.new to create a new instance of Post
-    @post = Post.new
-    @post.title = params[:post][:title]
-    @post.body = params[:post][:body]
     @topic = Topic.find(params[:topic_id])
- # #35  assign a topic to a post
-    @post.topic = @topic
+    @post = @topic.posts.build(post_params)
+# #14  assign @post.user in the same way we assigned @post.topic, to properly scope the new post
+    @post.user = current_user
 
 # #10 if Post is successfully saved (see #11); Redirecting to @post will direct the user to the posts show view
     if @post.save
@@ -39,8 +40,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.title = params[:post][:title]
-    @post.body = params[:post][:body]
+    @post.assign_attributes(post_params)
 
     if @post.save
       flash[:notice] = "Post was updated."
@@ -64,5 +64,12 @@ class PostsController < ApplicationController
       flash.now[:alert] = "There was an error deleting the post."
       render :show
     end
+  end
+
+# remember to add private methods to the bottom of the file. Any method defined below private, will be private.
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 end
