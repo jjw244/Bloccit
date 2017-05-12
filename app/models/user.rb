@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 # #2  register an inline callback directly after the before_save callback.
  #{ self.email = email.downcase } is the code that will run when the callback executes.
   before_save { self.email = email.downcase if email.present? }
+  before_save { self.role ||= :member }
 
 # #3  use Ruby's validates function to ensure that name is present and has a maximum and minimum length
   validates :name, length: { minimum: 1, maximum: 100 }, presence: true
@@ -18,4 +19,6 @@ class User < ActiveRecord::Base
 # #6  use Ruby's has_secure_password: "adds methods to set and authenticate against a BCrypt password.
  #This mechanism requires you to have a password_digest attribute".
   has_secure_password
+
+  enum role: [:member, :admin]
 end

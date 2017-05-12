@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-# #12
   before_action :require_sign_in, except: :show
+# #10 use a second before_action filter to check the role of a signed-in user.
+ # If the current_user isn't authorized based on their role, we'll redirect them to the posts show view
+  before_action :authorize_user, except: [:show, :new, :create]
 
   def show
 # #19  find the post that corresponds to the id in the params that was passed to  show and assign it to @post
@@ -10,7 +12,7 @@ class PostsController < ApplicationController
 
   def new
     @topic = Topic.find(params[:topic_id])
-  # #7  create an instance variable, @post, then assign it an empty post returned by Post.new
+# #7  create an instance variable, @post, then assign it an empty post returned by Post.new
     @post = Post.new
   end
 
@@ -68,8 +70,16 @@ class PostsController < ApplicationController
 
 # remember to add private methods to the bottom of the file. Any method defined below private, will be private.
   private
-
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+   def authorize_user
+     post = Post.find(params[:id])
+# #11 redirect the user unless they own the post they're attempting to modify, or they're an admin
+   unless current_user == post.user || current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to [post.topic, post]
+    end
   end
 end
