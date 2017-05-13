@@ -6,23 +6,7 @@
 <div class="row">
   <div class="col-md-8">
     <p class="lead"><%= @topic.description %></p>
-<!-- #10 iterate over the posts belonging to @topic, and display each post-->
-    <% @topic.posts.each do |post| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-<!-- #39 refactor how we link to individual posts using the topic_post_path method. -->
-  <!-- This helper takes a topic and a post and generates a path to the posts show view -->
-            <%= link_to post.title, topic_post_path(@topic, post) %>
-          </h4>
-<!-- #40 add submission and comment details for each post in the show view -->
-            <small>
-              submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
-              <%= post.comments.count %> Comments
-            </small>
-        </div>
-      </div>
-    <% end %>
+    <%= render @topic.posts %>
   </div>
   <% if current_user %>
     <div class="col-md-4">
