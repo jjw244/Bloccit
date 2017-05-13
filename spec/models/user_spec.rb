@@ -56,6 +56,10 @@ RSpec.describe User, type: :model do
       expect(user).to respond_to(:member?)
     end
 
+    it "responds to moderator?" do
+      expect(user).to respond_to(:moderator?)
+    end
+
   describe "roles" do
 # #4  expect that users will be assigned the role of member by default
     it "is member by default" do
@@ -71,6 +75,10 @@ RSpec.describe User, type: :model do
       it "returns false for #admin?" do
         expect(user.admin?).to be_falsey
       end
+
+      it "returns false for #moderator?" do
+        expect(user.moderator?).to be_falsey
+      end
     end
 
 # #6  test member and admin users within separate contexts
@@ -85,6 +93,28 @@ RSpec.describe User, type: :model do
 
       it "returns true for #admin?" do
         expect(user.admin?).to be_truthy
+      end
+
+      it "returns false for #moderator?" do
+        expect(user.moderator?).to be_falsey
+      end
+    end
+
+    context "moderator user" do
+      before do
+        user.moderator!
+      end
+
+      it "returns false for #member?" do
+        expect(user.member?).to be_falsey
+      end
+
+      it "returns false for #admin?" do
+        expect(user.admin?).to be_falsey
+      end
+
+      it "returns true for #moderator?" do
+        expect(user.moderator?).to be_truthy
       end
     end
   end

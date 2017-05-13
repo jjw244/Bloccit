@@ -56,8 +56,11 @@ class TopicsController < ApplicationController
    before_action :require_sign_in, except: [:index, :show]
 # #8 use another before_action filter to check the role of signed-in users.
   # If the  current_user isn't an admin, we'll redirect them to the topics index view
-   before_action :authorize_user, except: [:index, :show]
+   before_action :authorize_user, except: [:index, :show, :edit, :update]
+   before_action :check_moderator_role, only: [:edit, :update]
 
+
+# need a moderator user to access update and no create or delete
   private
   def topic_params
     params.require(:topic).permit(:name, :description, :public)
@@ -67,6 +70,13 @@ class TopicsController < ApplicationController
   def authorize_user
     unless current_user.admin?
       flash[:alert] = "You must be an admin to do that."
+      redirect_to topics_path
+    end
+  end
+
+  def check_moderator_role
+    unless current_user.moderator? || current_user.admin?
+      flash[:alert] = "You must be an admin/moderator to do that."
       redirect_to topics_path
     end
   end
