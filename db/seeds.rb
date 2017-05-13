@@ -23,13 +23,18 @@ topics = Topic.all
 # Create Posts
 50.times do
 # #1  Adding a ! instructs the method to raise an error if there's a problem with the data we're seeding
-  Post.create!(
+  post = Post.create!(
     user:   users.sample,
 # #2  class RandomData attributes DNE yet -> "Whishful Coding" can increase productivity becasue it allows you to stay focused on one problem at a time
     topic:  topics.sample,
     title:  RandomData.random_sentence,
     body:   RandomData.random_paragraph
   )
+
+# #12  update the time a post was created
+  post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
+# #13  create between one and five votes for each post. [-1, 1].sample randomly creates either an up vote or a down vote
+  rand(1..5).times { post.votes.create!(value: [-1, 1].sample, user: users.sample) }
 end
 posts = Post.all
 
@@ -65,3 +70,4 @@ puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Vote.count} votes created"
