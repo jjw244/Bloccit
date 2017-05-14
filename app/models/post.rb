@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 # #4  add the votes association to Post
   has_many :votes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   after_create :create_vote
 

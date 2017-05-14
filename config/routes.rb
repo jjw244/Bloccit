@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts, only: [] do
 # #5  only add create and destroy routes for comments
     resources :comments, only: [:create, :destroy]
+    resources :favorites, only: [:create, :destroy]
 
     post '/up-vote' => 'votes#up_vote', as: :up_vote
     post '/down-vote' => 'votes#down_vote', as: :down_vote
