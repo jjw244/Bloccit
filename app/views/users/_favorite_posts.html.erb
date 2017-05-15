@@ -1,0 +1,17 @@
+<% @favorites.each do |favorite| %>
+<!-- <div class="media"> -->
+<div class="media">
+  <div class="pull-left"><%= image_tag favorite.post.user.avatar_url(50), class: 'media-object' %></div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %>
+    </h4>
+    <small>
+      submitted <%= time_ago_in_words(favorite.post.created_at) %> ago by <%= favorite.post.user.name %> <br>
+      <%= pluralize(favorite.post.comments.count, 'comment') %>,
+      <%= pluralize(favorite.post.up_votes, 'up vote') %>,
+      <%= pluralize(favorite.post.down_votes, 'down vote') %>
+    </small>
+  </div>
+</div>
+<% end %>
