@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "password") }
+  let(:user) { create(:user) }
 
   it { is_expected.to have_many(:posts) }
   it { is_expected.to have_many(:comments) }
@@ -25,7 +26,7 @@ RSpec.describe User, type: :model do
 
   describe "attributes" do
     it "should have name and email attributes" do
-      expect(user).to have_attributes(name: "Bloccit User", email: "user@bloccit.com")
+      expect(user).to have_attributes(name: user.name, email: user.email)
     end
   end
 
@@ -108,6 +109,18 @@ RSpec.describe User, type: :model do
       favorite = user.favorites.where(post: @post).create
 # #3  expect that favorite_for will return the favorite we created in the line before
       expect(user.favorite_for(@post)).to eq(favorite)
+    end
+  end
+
+  describe ".avatar_url" do
+# #6  build a user with FactoryGirl. We pass email: "blochead@bloc.io" to  build, which overrides the email address that would be generated in the factory with "blochead@bloc.io"
+    let(:known_user) { create(:user, email: "blochead@bloc.io") }
+
+    it "returns the proper Gravatar url for a known email entity" do
+# #7  set the expected string that Gravatar should return for "blochead@bloc.io"
+      expected_gravatar = "http://gravatar.com/avatar/bb6d1172212c180cfbdb7039129d7b03.png?s=48"
+# #8  expect known_user.avatar_url to return  http://gravatar.com/avatar/bb6d1172212c180cfbdb7039129d7b03.png?s=48
+      expect(known_user.avatar_url(48)).to eq(expected_gravatar)
     end
   end
 end
